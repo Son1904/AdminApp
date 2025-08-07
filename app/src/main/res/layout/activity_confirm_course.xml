@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.ConfirmCourseActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true"
+        app:liftOnScroll="false">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Confirm Details"
+            app:titleTextAppearance="@style/Toolbar.TitleText"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:padding="16dp">
+
+                <TextView
+                    android:text="Day of week:"
+                    android:layout_gravity="start|center_vertical"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/text_view_day_confirm"
+                    android:layout_gravity="end"
+                    tools:text="Tuesday"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:text="Time:"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/text_view_time_confirm"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="end"
+                    tools:text="13:30"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:text="Capacity:"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/text_view_capacity_confirm"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="end"
+                    tools:text="6"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:text="Duration:"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/text_view_duration_confirm"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="end"
+                    tools:text="90 minutes"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:text="Price:"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/text_view_price_confirm"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="end"
+                    tools:text="£43.00"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:text="Type:"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/text_view_type_confirm"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="end"
+                    tools:text="Aerial Yoga"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:text="Description:"
+                    android:layout_marginTop="16dp"
+                    android:layout_columnSpan="2"
+                    android:layout_gravity="start"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/text_view_description_confirm"
+                    android:layout_marginTop="4dp"
+                    android:layout_columnSpan="2"
+                    android:layout_gravity="start"
+                    tools:text="test"
+                    android:textSize="16sp"/>
+
+            </GridLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/blue_edit"
+                android:text="Edit" />
+
+            <Button
+                android:id="@+id/button_confirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/green_confirm"
+                android:text="Confirm" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
